@@ -15,11 +15,14 @@ def input_information():
     print("My favorite color is " + Color)
     Age = input("What is your age?\n")
     print(f"My age is {Age}")
-    first, last = Name.split(" ")
+    if " " in Name:
+        first, last = Name.split(" ")
+        print(f"\n\n{first} {last}\'s Information:")
+    else:
+        print(f"\n\n{Name}\'s Information:")
 
     def print_information():
         print(f'''
-        {first}\'s Information:
         Name: {Name}
         Favorite Color: {Color}
         Age: {Age}
